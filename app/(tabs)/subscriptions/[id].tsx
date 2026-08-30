@@ -1,4 +1,4 @@
-import { Link, useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
 
@@ -9,7 +9,7 @@ const SubscriptionDetails = () => {
   return (
     <View>
       <Text> SubscriptionDetails :{id}</Text>
-      <Link  onPress={()=>router.back()}>Go back</Link>
+      <Text onPress={()=>router.back()}>Go back</Text>
     </View>
   )
 }
