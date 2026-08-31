@@ -7,7 +7,7 @@ export default function Index() {
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
       <View className="flex-1 items-center justify-center bg-background">
       <Text className="text-xl font-bold text-success">
-        Welcome to Nativewind!
+        Welcome to my app!
       </Text>
       <View className='text-center flex'>
       <Link href={"/onboarding"} className='mt-7 bg-primary  text-white rounded h-auto p-1'>Go to onboarding</Link>
