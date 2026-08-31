@@ -11,12 +11,13 @@ export default function TabLayout() {
       <View>
         <Image
           source={icon}
-          className={`w-6 h-6  ${focused ?
-             '   w-8 h-8   '
+          className={`w-6 h-6 ${focused ?
+             '   w-8 h-8 '
               : 'opacity-50 '}
               
               
               `}
+              resizeMode='contain'
         />
       </View>
     )
@@ -31,15 +32,18 @@ export default function TabLayout() {
           borderRadius: 30, // Rounded corners
           backgroundColor: 'black', // Light background color
           elevation: 5, // Elevation for Android
-          height: 50, // Set a fixed height for the tab bar
-          paddingTop: 30, // Add some margin at the top
+          height: Math.max( 60), // Set a fixed height for the tab bar
+          left: Math.max(insets.left, 10), // Ensure a minimum left margin
+          right: Math.max(insets.right, 10), // Ensure a minimum right margin
+          paddingBottom: Math.max(insets.bottom, 10), // Ensure a minimum bottom padding
+          paddingTop: 5, // Padding at the top
+          
+          
 
         },
 
         tabBarShowLabel: false, // Hide the label
-        tabBarIconStyle: {
-          paddingTop: Math.max(insets.top, 10), // Add some padding at the top
-        },
+
         
       }}
 
@@ -55,7 +59,7 @@ export default function TabLayout() {
           name={tab.name}
        
           options={{ 
-            tabBarBadge: tab.name === 'insights' ? 3 : undefined,
+            tabBarBadge: tab.name === 'insights' ? 7 : undefined,
             title: tab.title,
             tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={tab.icon} />,
           }}

@@ -5,6 +5,7 @@ declare global {
         name: string;
         title: string;
         icon: ImageSourcePropType;
+        href: string? ;
     }
 
     interface TabIconProps {
@@ -53,3 +54,4 @@ declare global {
 }
 
 export { };
+
